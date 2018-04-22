@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ws Клиент</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<style type="text/css">
+			#controlWrapper{margin-top: 10px;}
+			.input-group-addon{padding: 9px 12px;}
+			/*.col-xs-4, .col-xs-8, .controls*/
+			div[class^='col-'], .controls
+			{
+				padding-right: 0px !important;
+				padding-left: 0px !important;
+			}
+			.input-group, #startConnection, #chatMessage
+			{
+				width: 80% !important;
+				margin-left: 10%
+			}
+			.controls{margin-bottom: 5px;}
+			#chatMessage
+			{
+				resize: none;
+			}
+			.sendWrapper{text-align: center;}
+			#sendMessage{width: 100% !important;}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row" id="controlWrapper">
+				<div class="controls row">
+					<div class="input-group">
+						<div class="col-xs-4 col-md-4">
+							<span class="input-group-addon">							URL сервера:
+							</span>				
+						</div>
+						<div class="col-xs-8 col-md-8">
+							<input id="wsServerUrl" type="text" class="form-control" value="ws://localhost:5000">
+						</div>
+					</div>
+				</div>
+				<div class="controls row">
+					<div class="input-group">
+						<div class="col-xs-4 col-md-4">
+							<span class="input-group-addon">							User nickName:
+							</span>				
+						</div>
+						<div class="col-xs-8 col-md-8">
+							<input id="nickName" type="text" class="form-control" value="">
+						</div>
+					</div>
+				</div>
+				<div class="controls row">
+					<div id="startConnection" class="btn btn-info">Подключиться</div>
+				</div>
+				<div class="controls row">
+					<textarea class="form-control" rows="5" id="chatMessage">
+					</textarea>
+				</div>
+				<div class="controls row">
+					<div class="input-group">
+						<div class="col-xs-10 col-md-10">
+							<input id="messageInput" type="text" class="form-control" value="">
+						</div>
+						<div class="col-xs-2 col-md-2 sendWrapper">
+							<div id="sendMessage" class="btn btn-info">Отправить</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/wsClient.js"></script>	
+</html>
